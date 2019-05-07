@@ -1,14 +1,23 @@
 // https://rallycoding.herokuapp.com/api/music_albums
-import React from 'react';
+import React, { Component } from 'react';
 
 import { Text, View } from 'react-native';
 
-const AlbumList = () => {
+// const AlbumList = () => {
+class AlbumList extends Component {
+    componentWillMount() {   
+        console.log('componentWillMount in AlbumList');
+        debugger;
+    }
+
+    render() {
     return (
-        <View>
+         <View>
             <Text>AlbumList</Text>
-        </View>
-    );
-};
+         </View>
+        );
+}
+    
+}
 
 export default AlbumList;
