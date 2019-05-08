@@ -7,9 +7,11 @@ import Card from './Card';
 
 import CardSection from './CardSection';
 
+import Button from './Button';
+
 const AlbumDetails = ({ album }) => {
     const { title, artist, url, image, thumbnail_image } = album;
-    const { headerTextStyle, thumbnail_Style, headerContentStyle, thumbnail_Container_Style } = styles;
+    const { image_Style, headerTextStyle, thumbnail_Style, headerContentStyle, thumbnail_Container_Style } = styles;
     
     return (
         <Card>
@@ -22,6 +24,16 @@ const AlbumDetails = ({ album }) => {
              <Text style={headerTextStyle} > {artist} </Text>
            </View>
         </CardSection>
+       
+        <CardSection>
+       <Image style={image_Style} source={{ uri: image }} />
+       </CardSection>
+
+       <CardSection>
+        <Button />
+       </CardSection>
+
+
        </Card>
       
     );
@@ -46,6 +58,11 @@ const AlbumDetails = ({ album }) => {
                 },
                 headerTextStyle: {
                     fontSize: 18,
+                },
+                image_Style: {
+                    height: 300,
+                    flex: 1,
+                    width: null,
                 },
     };
 
